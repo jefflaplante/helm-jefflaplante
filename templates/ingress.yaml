@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    provider: stackpoint
+  name: jefflaplante.com 
+  namespace: jeff
+spec:
+  rules:
+  - host: www.jefflaplante.com
+    http:
+      paths:
+      - backend:
+          serviceName: jefflaplante-jefflaplante 
+          servicePort: 80 
